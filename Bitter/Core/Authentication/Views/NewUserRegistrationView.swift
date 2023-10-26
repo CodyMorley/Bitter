@@ -64,7 +64,6 @@ struct NewUserRegistrationView: View {
         }
         .ignoresSafeArea()
     }
-    
 }
 
 

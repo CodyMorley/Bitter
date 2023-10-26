@@ -43,9 +43,10 @@
 		04402B332AE9A1D500E5DB34 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 04402B322AE9A1D500E5DB34 /* FirebaseStorage */; };
 		04402B352AE9A1D500E5DB34 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 04402B342AE9A1D500E5DB34 /* FirebaseStorageCombine-Community */; };
 		04402B372AE9C00B00E5DB34 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04402B362AE9C00B00E5DB34 /* AuthenticationViewModel.swift */; };
-		0452EAFB2AE068D200DEBC96 /* BitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452EAFA2AE068D200DEBC96 /* BitterApp.swift */; };
 		0452EAFF2AE068D300DEBC96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452EAFE2AE068D300DEBC96 /* Assets.xcassets */; };
 		0452EB022AE068D300DEBC96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452EB012AE068D300DEBC96 /* Preview Assets.xcassets */; };
+		0470D8E32AEB22A000F1EB3D /* BitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470D8E22AEB22A000F1EB3D /* BitterApp.swift */; };
+		047CA14E2AEB2706007948B8 /* MainInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CA14D2AEB2706007948B8 /* MainInterfaceView.swift */; };
 		0489B59C2AE5B83B003F21EA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B59B2AE5B83B003F21EA /* ProfileView.swift */; };
 		0489B59E2AE5B989003F21EA /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B59D2AE5B989003F21EA /* ProfileHeaderView.swift */; };
 		0489B5A02AE5BAF2003F21EA /* ProfileActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489B59F2AE5BAF2003F21EA /* ProfileActionButtonsView.swift */; };
@@ -79,9 +80,10 @@
 		04402AFD2AE99F6900E5DB34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		04402B362AE9C00B00E5DB34 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		0452EAF72AE068D200DEBC96 /* Bitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0452EAFA2AE068D200DEBC96 /* BitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitterApp.swift; sourceTree = "<group>"; };
 		0452EAFE2AE068D300DEBC96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0452EB012AE068D300DEBC96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0470D8E22AEB22A000F1EB3D /* BitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitterApp.swift; sourceTree = "<group>"; };
+		047CA14D2AEB2706007948B8 /* MainInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceView.swift; sourceTree = "<group>"; };
 		0489B59B2AE5B83B003F21EA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0489B59D2AE5B989003F21EA /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		0489B59F2AE5BAF2003F21EA /* ProfileActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonsView.swift; sourceTree = "<group>"; };
@@ -237,7 +239,7 @@
 		0452EAF92AE068D200DEBC96 /* Bitter */ = {
 			isa = PBXGroup;
 			children = (
-				0452EAFA2AE068D200DEBC96 /* BitterApp.swift */,
+				0470D8E22AEB22A000F1EB3D /* BitterApp.swift */,
 				0489B5BA2AE70256003F21EA /* MainView.swift */,
 				04E570D52AE4424D00BE3CEE /* Core */,
 				04E570DA2AE442A600BE3CEE /* Extensions */,
@@ -257,6 +259,22 @@
 				0452EB012AE068D300DEBC96 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		047CA14B2AEB26E0007948B8 /* MainInterface */ = {
+			isa = PBXGroup;
+			children = (
+				047CA14C2AEB26F1007948B8 /* Views */,
+			);
+			path = MainInterface;
+			sourceTree = "<group>";
+		};
+		047CA14C2AEB26F1007948B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047CA14D2AEB2706007948B8 /* MainInterfaceView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0489B5992AE5B821003F21EA /* Views */ = {
@@ -346,6 +364,7 @@
 				04E570E82AE46BF500BE3CEE /* Explore */,
 				04E570DB2AE442C300BE3CEE /* Feed */,
 				04E570E52AE46B0000BE3CEE /* MainTab */,
+				047CA14B2AEB26E0007948B8 /* MainInterface */,
 				04E570EA2AE46C1000BE3CEE /* Messages */,
 				04E570E92AE46C0500BE3CEE /* Notification */,
 				04E570EB2AE46C2600BE3CEE /* Profile */,
@@ -623,11 +642,12 @@
 				0489B59E2AE5B989003F21EA /* ProfileHeaderView.swift in Sources */,
 				04402B372AE9C00B00E5DB34 /* AuthenticationViewModel.swift in Sources */,
 				0489B5A42AE5BF28003F21EA /* BiteFilterViewModel.swift in Sources */,
-				0452EAFB2AE068D200DEBC96 /* BitterApp.swift in Sources */,
 				0489B5AA2AE6EFE3003F21EA /* BitesView.swift in Sources */,
 				0489B5A22AE5BEE7003F21EA /* ProfileUserDetailsView.swift in Sources */,
+				047CA14E2AEB2706007948B8 /* MainInterfaceView.swift in Sources */,
 				0489B5A82AE5C27D003F21EA /* BiteFilterBarView.swift in Sources */,
 				04402AF72AE8ED4500E5DB34 /* InputFieldWithImageView.swift in Sources */,
+				0470D8E32AEB22A000F1EB3D /* BitterApp.swift in Sources */,
 				04E570E42AE443D800BE3CEE /* BiteRowView.swift in Sources */,
 				0489B5B92AE6F8B5003F21EA /* UserStatsView.swift in Sources */,
 				04E570ED2AE46C7200BE3CEE /* ExploreView.swift in Sources */,
