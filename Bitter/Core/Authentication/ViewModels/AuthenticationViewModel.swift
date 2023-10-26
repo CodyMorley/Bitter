@@ -11,7 +11,7 @@ import SwiftUI
 
 class AuthenticationViewModel: ObservableObject {
     @Published var session: FirebaseAuth.User?
-    
+    @Published var didAuthenticate = false
     
     init() {
         self.session = Auth.auth().currentUser
@@ -49,6 +49,7 @@ class AuthenticationViewModel: ObservableObject {
             }
             
             self.session = user
+            
             NSLog("DEBUG: Successful registration")
             NSLog("DEBUG: user ID for session is: \(String(describing: self.session?.uid))")
             
@@ -64,6 +65,7 @@ class AuthenticationViewModel: ObservableObject {
                         NSLog("DEBUG: Failed to set registration data for user \(username): \n\(error)\n\(error.localizedDescription)")
                         return
                     }
+                    self.didAuthenticate = true
                 }
         }
     }

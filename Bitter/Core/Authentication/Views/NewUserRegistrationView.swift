@@ -17,6 +17,10 @@ struct NewUserRegistrationView: View {
     
     var body: some View {
         VStack {
+            //NavigationLink(destination: NewUserProfilePhotoEditorView(),
+                           //isActive: $authViewModel.didAuthenticate,
+                           //label: { })
+            
             AuthenticationHeaderView(text1: "Get started.", text2: "Create your account")
             
             VStack(spacing: 40) {
@@ -59,13 +63,10 @@ struct NewUserRegistrationView: View {
             .padding(.bottom, 32)
         }
         .ignoresSafeArea()
-    
-        
-        
-        
     }
-        
+    
 }
+
 
 #Preview {
     NewUserRegistrationView()

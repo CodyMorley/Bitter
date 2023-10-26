@@ -22,7 +22,7 @@ struct InputFieldWithImageView: View {
                     .frame(width: 20, height: 20)
                     .foregroundColor(Color(.darkGray))
                 
-                if secureField ?? false {
+                if secureField {
                     SecureField(placeholderText, text: $text)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled(true)

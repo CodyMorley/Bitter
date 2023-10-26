@@ -65,7 +65,7 @@
 		04E570ED2AE46C7200BE3CEE /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E570EC2AE46C7200BE3CEE /* ExploreView.swift */; };
 		04E570EF2AE46C9500BE3CEE /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E570EE2AE46C9500BE3CEE /* NotificationsView.swift */; };
 		04E570F12AE46CC800BE3CEE /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E570F02AE46CC800BE3CEE /* MessagesView.swift */; };
-		04EC0A372AEB0C4C00C2DD9D /* ProfilePhotoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0A362AEB0C4C00C2DD9D /* ProfilePhotoEditorView.swift */; };
+		04EC0A372AEB0C4C00C2DD9D /* NewUserProfilePhotoEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC0A362AEB0C4C00C2DD9D /* NewUserProfilePhotoEditorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +101,7 @@
 		04E570EC2AE46C7200BE3CEE /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		04E570EE2AE46C9500BE3CEE /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		04E570F02AE46CC800BE3CEE /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
-		04EC0A362AEB0C4C00C2DD9D /* ProfilePhotoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoEditorView.swift; sourceTree = "<group>"; };
+		04EC0A362AEB0C4C00C2DD9D /* NewUserProfilePhotoEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserProfilePhotoEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +180,7 @@
 			children = (
 				04402AEF2AE8E6B000E5DB34 /* LoginView.swift */,
 				04402AF22AE8E6D500E5DB34 /* NewUserRegistrationView.swift */,
+				04EC0A362AEB0C4C00C2DD9D /* NewUserProfilePhotoEditorView.swift */,
 				04402AFC2AE9991200E5DB34 /* Subviews */,
 			);
 			path = Views;
@@ -242,6 +243,7 @@
 				04E570DA2AE442A600BE3CEE /* Extensions */,
 				04E570D62AE4425500BE3CEE /* Models */,
 				04E570D92AE4428B00BE3CEE /* Services */,
+				04EC0A382AEB1C4600C2DD9D /* Utilities */,
 				0452EAFE2AE068D300DEBC96 /* Assets.xcassets */,
 				04402AFD2AE99F6900E5DB34 /* GoogleService-Info.plist */,
 				0452EB002AE068D300DEBC96 /* Preview Content */,
@@ -261,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				0489B59B2AE5B83B003F21EA /* ProfileView.swift */,
-				04EC0A362AEB0C4C00C2DD9D /* ProfilePhotoEditorView.swift */,
 				0489B5BF2AE70DC5003F21EA /* Subviews */,
 			);
 			path = Views;
@@ -341,15 +342,15 @@
 			isa = PBXGroup;
 			children = (
 				04402AEC2AE8E69100E5DB34 /* Authentication */,
-				04402AE52AE8DCA400E5DB34 /* UploadBite */,
-				0489B5AF2AE6F688003F21EA /* SideMenu */,
 				04E570DC2AE442CB00BE3CEE /* Components */,
 				04E570E82AE46BF500BE3CEE /* Explore */,
 				04E570DB2AE442C300BE3CEE /* Feed */,
-				04E570EB2AE46C2600BE3CEE /* Profile */,
-				04E570EA2AE46C1000BE3CEE /* Messages */,
 				04E570E52AE46B0000BE3CEE /* MainTab */,
+				04E570EA2AE46C1000BE3CEE /* Messages */,
 				04E570E92AE46C0500BE3CEE /* Notification */,
+				04E570EB2AE46C2600BE3CEE /* Profile */,
+				0489B5AF2AE6F688003F21EA /* SideMenu */,
+				04402AE52AE8DCA400E5DB34 /* UploadBite */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -493,6 +494,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		04EC0A382AEB1C4600C2DD9D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,7 +607,7 @@
 				0489B59C2AE5B83B003F21EA /* ProfileView.swift in Sources */,
 				0489B5AE2AE6F24B003F21EA /* UserRowView.swift in Sources */,
 				0489B5B32AE6F6BC003F21EA /* SideMenuView.swift in Sources */,
-				04EC0A372AEB0C4C00C2DD9D /* ProfilePhotoEditorView.swift in Sources */,
+				04EC0A372AEB0C4C00C2DD9D /* NewUserProfilePhotoEditorView.swift in Sources */,
 				04E570F12AE46CC800BE3CEE /* MessagesView.swift in Sources */,
 				04402AF02AE8E6B000E5DB34 /* LoginView.swift in Sources */,
 				04402AEB2AE8DE1000E5DB34 /* TextAreaView.swift in Sources */,
