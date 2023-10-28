@@ -11,7 +11,9 @@ import SwiftUI
 
 class AuthenticationViewModel: ObservableObject {
     @Published var session: FirebaseAuth.User?
-    @Published var didAuthenticate = false
+    @Published var didAuthenticateNewUser = false
+    
+    private var tempSession: FirebaseAuth.User?
     
     init() {
         self.session = Auth.auth().currentUser
@@ -48,10 +50,11 @@ class AuthenticationViewModel: ObservableObject {
                 return
             }
             
-            self.session = user
+            //self.session = user
+            //NSLog("DEBUG: Successful registration")
+            //NSLog("DEBUG: user ID for session is: \(String(describing: self.session?.uid))")
             
-            NSLog("DEBUG: Successful registration")
-            NSLog("DEBUG: user ID for session is: \(String(describing: self.session?.uid))")
+            self.tempSession = user
             
             let userData = ["email" : email,
                         "username" : username.lowercased(),
@@ -65,7 +68,7 @@ class AuthenticationViewModel: ObservableObject {
                         NSLog("DEBUG: Failed to set registration data for user \(username): \n\(error)\n\(error.localizedDescription)")
                         return
                     }
-                    self.didAuthenticate = true
+                    self.didAuthenticateNewUser = true
                 }
         }
     }
@@ -79,4 +82,25 @@ class AuthenticationViewModel: ObservableObject {
             NSLog("DEBUG: Error signing out: \n\(error)\n\(error.localizedDescription)")
         }
     }
+    
+    func uploadProfilePhoto(_ image: UIImage) {
+        guard let uid = tempSession?.uid else { return }
+        
+        ImageUploader.uploadImage(image: image) { url in
+            Firestore.firestore().collection("users")
+                .document(uid)
+                .updateData(["profilePhotoUrl" : url]) { error in
+                    if let error {
+                        NSLog("Could not update profile photo with photo url: \(url)\nError Description: \n\(error.localizedDescription)\n Full Error:\n\(error)")
+                        return
+                    }
+                    self.endTempSessionWithSuccess()
+                }
+        }
+    }
+    
+    private func endTempSessionWithSuccess() {
+        session = tempSession
+    }
+    
 }
